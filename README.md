@@ -27,3 +27,25 @@ Make sure this code is on every page of your website. We recommend pasting it im
 </script>
 <!-- End Matomo Code -->
 ```
+
+# Warning when installing
+
+```
+Warning: You are now accessing Matomo from http://127.0.0.1:8080/index.php, but Matomo has been configured to run at this address: http://127.0.0.1/index.php.
+
+Click here to access Matomo safely and remove this warning. You may also want to contact your Matomo administrator and notify them about this issue ().
+
+How do I fix this problem and how do I login again?
+The Matomo Super User can manually edit the file piwik/config/config.ini.php and add the following lines:
+
+[General]
+trusted_hosts[] = "127.0.0.1:8080"
+
+After making the change, you will be able to login again.
+
+You may also disable this security feature (not recommended). To do so edit config/config.ini.php and add:
+
+[General]
+enable_trusted_host_check=0
+
+```
