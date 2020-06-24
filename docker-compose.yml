@@ -20,8 +20,8 @@ services:
 #     - ./logs:/var/www/html/logs
       - matomo:/var/www/html
     environment:
-      - MATOMO_DATABASE_HOST=db
-      - VIRTUAL_HOST: matomo.dina-web.net
+       MATOMO_DATABASE_HOST: db
+       VIRTUAL_HOST: matomo.dina-web.net
     env_file:
       - ./.db.env
     ports:
